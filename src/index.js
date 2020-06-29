@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TodoTaskList from './components/note';
+import Notes from './components/notes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoTaskList />
+    <Notes />
   </React.StrictMode>,
   document.getElementById('root')
 );
