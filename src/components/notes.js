@@ -1,5 +1,6 @@
 import React from 'react'
 import Note from './note';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -11,11 +12,20 @@ class Notes extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleDelete(note){
+        const newNotes = this.state.notes;
+        const index = newNotes.indexOf(note);
+        newNotes.splice(index, 1);
+        this.setState({
+            notes: newNotes
+        });
+     }
+
 
     handleSubmit(event) {
         event.preventDefault();
         const newNotes = this.state.notes;
-        newNotes.push(newNotes.length);
+        newNotes.push(uuidv4());
         this.setState({
             notes: newNotes
         });
@@ -23,7 +33,7 @@ class Notes extends React.Component {
 
     render() {
         const notes = this.state.notes.map((note) => {
-            return <Note key={note}/>
+            return <div key={note}><Note /> <button onClick={() => this.handleDelete(note)}>Delete note</button></div>
         });
 
         return (
