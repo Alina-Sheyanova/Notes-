@@ -41,7 +41,7 @@ class Notes extends React.Component {
             <div>
                 {notes}
                 <form onSubmit={this.handleSubmit}>
-                    <input type="submit" value="Add notes" class="AddNotes" />
+                    <input type="submit" value="Add note" class="AddNotes" />
                 </form>
             </div>
         );
