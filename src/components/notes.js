@@ -1,6 +1,7 @@
 import React from 'react'
 import Note from './note';
 import { v4 as uuidv4 } from 'uuid';
+import './style.css';
 
 
 
@@ -33,14 +34,14 @@ class Notes extends React.Component {
 
     render() {
         const notes = this.state.notes.map((note) => {
-            return <div key={note}><Note /> <button onClick={() => this.handleDelete(note)}>Delete note</button></div>
+            return <div class="Note" key={note}><Note /> <button class="Delete" onClick={() => this.handleDelete(note)}>Delete note</button></div>
         });
 
         return (
             <div>
                 {notes}
                 <form onSubmit={this.handleSubmit}>
-                    <input type="submit" value="Add notes" />
+                    <input type="submit" value="Add notes" class="AddNotes" />
                 </form>
             </div>
         );

@@ -1,6 +1,7 @@
 import React from 'react'
 import TodoTask from './todo';
 import AddTodo from './add-todo';
+import './style.css';
 
 
 

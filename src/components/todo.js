@@ -17,9 +17,12 @@ class Todo extends React.Component {
 
     render() {
         return (
-            <div>
+           
+            <div class="Todo">
+            
                 <input type="checkbox" onChange={this.toggle}/>
                 { this.state.done ? <del>{this.props.content}</del> : <span>{this.props.content}</span> }
+                
             </div>
         );
     }

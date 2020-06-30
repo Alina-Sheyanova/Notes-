@@ -23,8 +23,8 @@ class AddTodo extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Your notes" value={this.state.text} onChange={this.handleChange} />
-          <input type="submit" value="+" />
+          <input type="text" placeholder="Your notes" class="AddTodoText" value={this.state.text} onChange={this.handleChange}  />
+          <input type="submit" value="+" class="AddTodo"/>
         </form>
       </div>
     );
